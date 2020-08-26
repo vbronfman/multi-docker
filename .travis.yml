@@ -1,4 +1,6 @@
 sudo: required
+language: generic
+
 services:
   - docker
   
@@ -23,7 +25,7 @@ after_success:
   
  #deploy to AWS
  #MultiDocker-env.eba-ehgntau5.us-east-2.elasticbeanstalk.com 
- deploy:
+deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
@@ -32,8 +34,8 @@ after_success:
   bucket_path: docker-multi
   on:
     branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   
   
   
