@@ -26,6 +26,7 @@ after_success:
  #deploy to AWS
  #MultiDocker-env.eba-ehgntau5.us-east-2.elasticbeanstalk.com 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
